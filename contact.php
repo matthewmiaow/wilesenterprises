@@ -53,6 +53,8 @@
 
     <div class="container" style="margin-top: 50px">
         <?php
+
+        echo ($_POST);
         if(!empty($_POST)) {
             echo('<form method="post">
                 <label for="fname">First Name</label>
