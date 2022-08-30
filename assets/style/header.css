@@ -1,6 +1,13 @@
-﻿ul {
+﻿body {
+    background-image: url(assets/img/dark-stage.jpg);
+    background-size: cover;
+    font-family: proxima nova, sans-serif;
+}
+
+ul {
     width: 25%;
     margin: auto;
+    font-weight: bold;
     list-style-type: none;
     padding: 0;
     overflow: hidden;
