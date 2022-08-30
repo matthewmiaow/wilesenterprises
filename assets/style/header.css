@@ -32,7 +32,7 @@ li {
     }
 
         li a:hover {
-            transform: translate(0px, -2px);
+            transform: translate(0px, -3px);
             transition-duration: 0.3s;
         }
 
