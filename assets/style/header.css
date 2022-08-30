@@ -32,5 +32,11 @@ li {
     }
 
         li a:hover {
-            background-color: #111;
+            transform: translate(0px, -2px);
+            transition-duration: 0.3s;
+        }
+
+        li .active {
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
         }
