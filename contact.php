@@ -71,7 +71,12 @@
                     <input type="submit" value="Submit">
                     </form>');
             } else {
-                echo ("Thank you for submitting your query!</br></br>Wiles Enterprises.");
+                echo ("Thank you for submitting your query!
+                       </br></br>
+                       You should receive a confirmation email from us soon to ensure that all your information is correct.</br>
+                       We should receive and reply to this email within 72 hours.
+                       </br></br>
+                       Wiles Enterprises.");
                 $to_email = "benwiles@wilesenterprises.com";
                 $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
                 $body = $_POST['subject'];
