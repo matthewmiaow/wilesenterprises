@@ -50,7 +50,7 @@
     </header>
 
     <div class="container" style="margin-top: 50px">
-        <form action="assets/script/contact.php" method="post">
+        <form method="post">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="First Name">
 
@@ -69,6 +69,22 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+
+    <?php
+        if(isset($_POST['submit'])) {
+            $to_email = "benwiles@wilesenterprises.com";
+            $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
+            $body = $_POST['subject'];
+            $headers = "From: ".$_POST['emailaddress'];
+
+            if ( mail($to_email, $subject, $body, $headers)) {
+                header("Location: https://wilesenterprises.com");
+                die();
+            } else {
+                echo("Email sending failed...");
+            }
+        }
+    ?>
 
 </body>
 </html>
