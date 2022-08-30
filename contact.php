@@ -5,6 +5,16 @@
     <meta charset="utf-8" />
     <title>Wiles Enterprises</title>
     <link rel="stylesheet" href="assets/style/header.css" />
+    <?php
+        if(isset($_POST['submit'])) {
+            echo ("isset");
+            $to_email = "benwiles@wilesenterprises.com";
+            $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
+            $body = $_POST['subject'];
+            $headers = "From: ".$_POST['emailaddress'];
+			header("refresh:0;url=https://matteodimaio.net/rice/rice-purity-leaderboard/index.php");
+        }
+    ?>
     <style>
         input[type=text], select, textarea {
             width: 100%;
@@ -50,7 +60,7 @@
     </header>
 
     <div class="container" style="margin-top: 50px">
-        <form method="POST">
+        <form method="post">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="First Name">
 
@@ -69,17 +79,5 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-
-    <?php
-        if(isset($_POST['submit'])) {
-            echo ("isset");
-            $to_email = "benwiles@wilesenterprises.com";
-            $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
-            $body = $_POST['subject'];
-            $headers = "From: ".$_POST['emailaddress'];
-			header("refresh:0;url=https://matteodimaio.net/rice/rice-purity-leaderboard/index.php");
-        }
-    ?>
-
 </body>
 </html>
