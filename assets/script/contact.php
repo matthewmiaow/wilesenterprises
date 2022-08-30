@@ -5,7 +5,7 @@
     $headers = "From: ".$_POST['emailaddress'];
  
     if ( mail($to_email, $subject, $body, $headers)) {
-        header("Location: https://example.com/myOtherPage.php");
+        header("Location: wilesenterprises.com");
         die();
     } else {
         echo("Email sending failed...");
