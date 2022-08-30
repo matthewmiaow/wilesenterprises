@@ -10,7 +10,7 @@
     }
 ?>
 
-<form action="contact.php" method="post">
+<form method="post">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="First Name">
 
