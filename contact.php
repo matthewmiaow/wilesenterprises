@@ -6,7 +6,7 @@
     <title>Wiles Enterprises</title>
     <link rel="stylesheet" href="assets/style/header.css" />
     <?php
-        if(isset($_POST['firstname'])) {
+        if(isset($_POST['submit'])) {
             $to_email = "benwiles@wilesenterprises.com";
             $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
             $body = $_POST['subject'];
