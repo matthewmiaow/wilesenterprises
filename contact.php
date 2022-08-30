@@ -50,7 +50,7 @@
     </header>
 
     <div class="container" style="margin-top: 50px">
-        <form method="post">
+        <form method="POST">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="First Name">
 
