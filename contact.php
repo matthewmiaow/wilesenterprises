@@ -65,7 +65,7 @@
     <div class="container" style="margin-top: 50px">
         <?php
         if(isset($_POST['firstname'])) {
-            echo('<form action="assets/script/contact.php" method="post">
+            echo('<form action="contact.php" method="post">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="First Name">
 
