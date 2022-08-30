@@ -54,7 +54,7 @@
     <div class="container" style="margin-top: 50px">
         <?php
 
-        if(!empty($_POST)) {
+        if(empty($_POST)) {
             echo('<form method="post">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="First Name">
