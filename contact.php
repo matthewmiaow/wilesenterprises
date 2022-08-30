@@ -53,6 +53,11 @@
 
     <div class="container" style="margin-top: 50px">
         <?php
+        if(!empty($_POST)) {
+            echo('isset');
+        } else {
+            echo ('Thank you for submitting your query!\n\nWiles Enterprises.')
+        }
         ?>
     </div>
 </body>
