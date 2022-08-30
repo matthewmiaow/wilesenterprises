@@ -11,7 +11,7 @@
             $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
             $body = $_POST['subject'];
             $headers = "From: ".$_POST['emailaddress'];
-            if (!mail($to_email, $subject, $body, $headers)) { echo("Email sending failed..."); }
+            mail($to_email, $subject, $body, $headers);
         }
     ?>
     <style>
