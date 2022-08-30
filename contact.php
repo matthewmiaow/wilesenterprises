@@ -56,7 +56,7 @@
         if(!empty($_POST)) {
             echo('isset');
         } else {
-            echo ('Thank you for submitting your query!\n\nWiles Enterprises.')
+            echo ('Thank you for submitting your query!\n\nWiles Enterprises.');
         }
         ?>
     </div>
