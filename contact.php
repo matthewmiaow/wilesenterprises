@@ -54,7 +54,6 @@
     <div class="container" style="margin-top: 50px">
         <?php
 
-        echo (count($_POST));
         if(!empty($_POST)) {
             echo('<form method="post">
                 <label for="fname">First Name</label>
@@ -75,7 +74,7 @@
                 <input type="submit" value="Submit">
                 </form>');
         } else {
-            echo ('Thank you for submitting your query! Wiles Enterprises.');
+            echo ("Thank you for submitting your query! \r\n\r\n Wiles Enterprises.");
         }
         ?>
     </div>
