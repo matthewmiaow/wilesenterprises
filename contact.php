@@ -78,8 +78,7 @@
             $headers = "From: ".$_POST['emailaddress'];
 
             if ( mail($to_email, $subject, $body, $headers)) {
-                header("Location: https://wilesenterprises.com");
-                die();
+                echo("Email sent successfully");
             } else {
                 echo("Email sending failed...");
             }
