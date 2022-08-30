@@ -75,7 +75,7 @@
                 <input type="submit" value="Submit">
                 </form>');
         } else {
-            echo ('Thank you for submitting your query!'.\n\n.'Wiles Enterprises.');
+            echo ('Thank you for submitting your query! Wiles Enterprises.');
         }
         ?>
     </div>
