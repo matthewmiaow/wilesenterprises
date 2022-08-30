@@ -50,24 +50,32 @@
     </header>
 
     <div class="container" style="margin-top: 50px">
-        <form action="assets/script/contact.php" method="post">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="First Name">
+        <?php
+        if(isset($_POST['firstname'])) {
+            echo('<form action="assets/script/contact.php" method="post">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="First Name">
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Last Name">
 
-            <label for="email">Email Address</label>
-            <input type="text" id="email" name="emailaddress" placeholder="Email Address">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="emailaddress" placeholder="Email Address">
 
-            <label for="pnum">Phone Number</label>
-            <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
+                <label for="pnum">Phone Number</label>
+                <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
 
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-            <input type="submit" value="Submit">
-        </form>
+                <input type="submit" value="Submit">
+                </form>');
+        } else {
+            echo ('Thank you for submitting your query!\n\nWiles Enterprises.')
+        }
+
+        
+        ?>
     </div>
 </body>
 </html>
