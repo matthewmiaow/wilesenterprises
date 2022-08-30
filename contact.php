@@ -5,15 +5,6 @@
     <meta charset="utf-8" />
     <title>Wiles Enterprises</title>
     <link rel="stylesheet" href="assets/style/header.css" />
-    <?php
-        if(isset($_POST['submit'])) {
-            $to_email = "benwiles@wilesenterprises.com";
-            $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
-            $body = $_POST['subject'];
-            $headers = "From: ".$_POST['emailaddress'];
-            mail($to_email, $subject, $body, $headers);
-        }
-    ?>
     <style>
         input[type=text], select, textarea {
             width: 100%;
@@ -60,29 +51,33 @@
 
     <div class="container" style="margin-top: 50px">
         <?php
+            if(empty($_POST)) {
+                echo('<form method="post">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="First Name">
 
-        if(empty($_POST)) {
-            echo('<form method="post">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="First Name">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Last Name">
 
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Last Name">
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="emailaddress" placeholder="Email Address">
 
-                <label for="email">Email Address</label>
-                <input type="text" id="email" name="emailaddress" placeholder="Email Address">
+                    <label for="pnum">Phone Number</label>
+                    <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
 
-                <label for="pnum">Phone Number</label>
-                <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                <input type="submit" value="Submit">
-                </form>');
-        } else {
-            echo ("Thank you for submitting your query!\n\nWiles Enterprises.");
-        }
+                    <input type="submit" value="Submit">
+                    </form>');
+            } else {
+                echo ("Thank you for submitting your query!\n\nWiles Enterprises.");
+                $to_email = "benwiles@wilesenterprises.com";
+                $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
+                $body = $_POST['subject'];
+                $headers = "From: ".$_POST['emailaddress'];
+                mail($to_email, $subject, $body, $headers);
+            }
         ?>
     </div>
 </body>
