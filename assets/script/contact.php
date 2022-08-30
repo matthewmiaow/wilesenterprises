@@ -3,5 +3,9 @@
     $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
     $body = $_POST['subject'];
     $headers = "From: ".$_POST['emailaddress'];
-	header("refresh:0;url=https://wilesenterprises.com/contact-confirm.html");
+    if ( mail($to_email, $subject, $body, $headers)) {
+	    header("refresh:0;url=https://wilesenterprises.com/contact-confirm.html");
+    } else {
+        echo("Email sending failed...");
+    }
 ?>
