@@ -5,7 +5,10 @@
 }
 
 ul {
-    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
     margin: auto;
     font-weight: bold;
     list-style-type: none;
@@ -17,6 +20,7 @@ ul {
 
 li {
     float: left;
+    width: fit-content();
 }
 
     li a {
