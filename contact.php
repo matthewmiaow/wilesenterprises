@@ -78,10 +78,11 @@
     <input style="visibility: hidden" type="checkbox" name="validform" checked>
     <div class="container" style="margin-top: 50px">
         <?php
+        header('Content-type: text/plain');
         if(!empty($_POST)) {
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         $_POST['validform'] = 'off';
-        echo("Invalid email address.\r\n");
+        echo("Invalid email address\r\n");
         }
         if (empty($_POST['firstname'])) {
         $_POST['validform'] = 'off';
