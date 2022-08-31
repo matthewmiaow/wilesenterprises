@@ -40,6 +40,14 @@
         }
 
         @media only screen and (max-device-width: 600px) {
+            ul {
+                font-size: 50px;
+            }
+
+            body {
+                font-size: 50px;
+            }
+
             .container {
                 width: 90%;
             }
