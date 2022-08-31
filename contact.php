@@ -85,11 +85,11 @@
         }
         if (empty($_POST['firstname'])) {
         $_POST['validform'] = 'off';
-        echo("First name can't be left empty.\r\n");
+        echo("Invalid first name\r\n");
         }
         if (empty($_POST['lastname'])) {
         $_POST['validform'] = 'off';
-        echo("Last name can't be left empty.\r\n");
+        echo("Invalid last name\r\n");
         }
         if (empty($_POST['subject'])) {
         $_POST['validform'] = 'off';
