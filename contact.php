@@ -135,7 +135,7 @@
         </br></br>
         Wiles Enterprises.");
         $to_email = "benwiles@wilesenterprises.com";
-        $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
+        $subject = 'Contact to Wiles Enterprises - '.ucfirst($_POST['firstname']).' '.ucfirst($_POST['lastname'])."\n\nPhone Num: ".$_POST['phonenumber'];
         $body = $_POST['subject'];
         $headers = "From: ".$_POST['emailaddress'];
         mail($to_email, $subject, $body, $headers);
