@@ -38,6 +38,12 @@
             background-color: #f2f2f2;
             padding: 20px;
         }
+
+        @media only screen and (max-device-width: 600px) {
+            .container {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
