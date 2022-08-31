@@ -96,7 +96,7 @@
         $_POST['validform'] = 'off';
         }
         }
-        if(empty($_POST or $_POST['validform'] == 'off')) {
+        if(empty($_POST) or $_POST['validform'] == 'off')) {
         echo('<form method="post">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="First Name">
