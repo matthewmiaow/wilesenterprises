@@ -98,8 +98,10 @@
             <input type="submit" value="Submit">
         </form>');
         } else {
+        echo($_POST['invalidaddr']);
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         echo('invalid addr');
+        $_POST['invalidaddr'] = true;
         }
         if (empty($_POST['firstname'])) {
         echo('invalid fname');
