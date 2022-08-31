@@ -79,6 +79,8 @@
     <div class="container" style="margin-top: 50px">
         <?php
         if(!empty($_POST)) {
+        echo("not empty posts</br>");
+        echo($_POST['validform']);
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         $_POST['validform'] = 'off';
         echo("Invalid email address</br>");
@@ -99,8 +101,6 @@
         $_POST['validform'] = 'off';
         echo("Invalid phone number</br>");
         }
-        echo("not empty posts</br>");
-        echo($_POST['validform']);
         }
         if(empty($_POST) or $_POST['validform'] == 'off') {
         echo('<form method="post">
