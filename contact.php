@@ -102,7 +102,7 @@
                 $_POST['validform'] = 'off';
                 echo("Invalid phone number<br />");
             }
-            if($_POST['validform'] == 'off') { echo('br'); }
+            if($_POST['validform'] == 'off') { echo('<br />'); }
         }
         if(empty($_POST) or $_POST['validform'] == 'off') {
         echo('<form method="post">
