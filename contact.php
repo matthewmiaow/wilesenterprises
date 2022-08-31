@@ -101,7 +101,7 @@
             $_POST['validform'] = 'off';
             echo("Invalid phone number<br />");
         }
-        }
+        
         if(empty($_POST) or $_POST['validform'] == 'off') {
         echo('<form method="post">
             <label for="fname">First Name</label>
