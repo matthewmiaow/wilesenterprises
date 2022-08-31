@@ -82,39 +82,32 @@
         echo('<form method="post">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="First Name">
-
             <label for="lname">Last Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Last Name">
-
             <label for="email">Email Address</label>
             <input type="text" id="email" name="emailaddress" placeholder="Email Address">
-
             <label for="pnum">Phone Number</label>
             <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
-
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
-
+            <input style="visibility: hidden" type="checkbox" name="validform" value=true>
             <input type="submit" value="Submit">
         </form>');
         } else {
-        echo($_POST['emailaddress']);
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
-        echo('invalid addr');
-        $_POST['emailaddress'] = 'invalid';
-        echo($_POST['emailaddress']);
+        $_POST['validform'] = false;
         }
         if (empty($_POST['firstname'])) {
-        echo('invalid fname');
+        $_POST['validform'] = false;
         }
         if (empty($_POST['lastname'])) {
-        echo('invalid lname');
+        $_POST['validform'] = false;
         }
         if (empty($_POST['subject'])) {
-        echo('invalid subject');
+        $_POST['validform'] = false;
         }
         if (!preg_match('/^[0-9]{7,12}+$/', $_POST['phonenumber'])) {
-        echo('invalid pnum');
+        $_POST['validform'] = false;
         }
         echo ("Thank you for submitting your query!
         </br></br>
