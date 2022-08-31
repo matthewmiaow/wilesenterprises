@@ -100,6 +100,7 @@
         echo("Invalid phone number</br>");
         }
         echo("not empty posts</br>");
+        echo($_POST['validationform']."</br>");
         }
         if(empty($_POST) or $_POST['validform'] == 'off') {
         echo('<form method="post">
