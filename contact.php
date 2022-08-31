@@ -110,7 +110,7 @@
         if (empty($_POST['subject'])) {
         echo('invalid subject');
         }
-        if (!preg_match('/^[0-9]{10}+$/', $_POST['phonenumber'])) {
+        if (!preg_match('/^[0-9]{7,12}+$/', $_POST['phonenumber'])) {
         echo('invalid pnum');
         }
         echo ("Thank you for submitting your query!
