@@ -79,8 +79,17 @@
     <div class="container" style="margin-top: 50px">
         <?php
         if(!empty($_POST)) {
-        echo("not empty posts</br>");
-        echo(empty($_POST['validform']));
+        foreach ($_POST as $key => $value) {
+        echo("<tr>)";
+        echo("<td>");
+                echo($key);
+                echo("</td>");
+            echo("<td>");
+                echo($value);
+                echo("</td>");
+            echo("</tr>");
+        }
+
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         $_POST['validform'] = 'off';
         echo("Invalid email address</br>");
