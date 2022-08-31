@@ -79,16 +79,8 @@
     <div class="container" style="margin-top: 50px">
         <?php
         if(!empty($_POST)) {
-        print_r($_POST);
         foreach ($_POST as $key => $value) {
-            echo("<tr>)";
-            echo("<td>");
-            echo($key);
-            echo("</td>");
-            echo("<td>");
-            echo($value);
-            echo("</td>");
-            echo("</tr>");
+        echo $key.'='.$value.'<br />';
         }
 
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
