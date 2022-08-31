@@ -80,7 +80,7 @@
         <?php
         if(!empty($_POST)) {
         echo("not empty posts</br>");
-        echo($_POST['validform']);
+        echo(empty($_POST['validform']));
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         $_POST['validform'] = 'off';
         echo("Invalid email address</br>");
