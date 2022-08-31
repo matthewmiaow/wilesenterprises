@@ -93,7 +93,7 @@
             <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
 
             <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
 
             <input type="submit" value="Submit">
         </form>');
@@ -102,6 +102,7 @@
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         echo('invalid addr');
         $_POST['emailaddress'] = 'invalid';
+        echo($_POST['emailaddress']);
         }
         if (empty($_POST['firstname'])) {
         echo('invalid fname');
