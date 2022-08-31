@@ -80,7 +80,7 @@
         if(!empty($_POST)) {
         foreach ($_POST as $key => $value) {
         echo $key.'='.$value.'<br />';
-        echo '<br />'
+        echo '<br />';
         }
 
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
