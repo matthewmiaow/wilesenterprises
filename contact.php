@@ -90,7 +90,7 @@
             <input type="text" id="email" name="emailaddress" placeholder="Email Address">
 
             <label for="pnum">Phone Number</label>
-            <input type="number" id="pnum" name="phonenumber" placeholder="Phone Number">
+            <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
 
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
@@ -110,7 +110,7 @@
         if (empty($_POST['subject'])) {
         echo('invalid subject');
         }
-        if (empty($_POST['phonenumber'])) {
+        if (!preg_match('/^[0-9]{10}+$/', $phone)) {
         echo('invalid pnum');
         }
         echo ("Thank you for submitting your query!
