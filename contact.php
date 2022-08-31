@@ -44,6 +44,10 @@
             padding: 20px;
         }
 
+        .errors {
+            color: rgb(148, 10, 29);
+        }
+
         @media only screen and (max-device-width: 600px) {
             ul {
                 font-size: 50px;
