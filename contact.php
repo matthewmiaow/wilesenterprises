@@ -75,7 +75,7 @@
             <li><a class="active" href="contact.php">Contact</a></li>
         </ul>
     </header>
-
+    <input style="visibility: hidden" type="checkbox" name="validform" checked>
     <div class="container" style="margin-top: 50px">
         <?php
         if(!empty($_POST)) {
@@ -108,7 +108,6 @@
             <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
-            <input style="visibility: hidden" type="checkbox" name="validform" checked>
             <input type="submit" value="Submit">
         </form>');
         } else {
