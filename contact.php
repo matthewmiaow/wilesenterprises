@@ -78,30 +78,34 @@
     <div class="container" style="margin-top: 50px">
         <?php
         if(!empty($_POST)) {
-        foreach ($_POST as $key => $value) {
-        echo $key.'='.$value.'<br />';
-        echo '<br />';
+            foreach ($_POST as $key => $value) {
+            echo $key.'='.$value.'<br />';
         }
+        echo '<br />';
 
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
-        $_POST['validform'] = 'off';
-        echo("Invalid email address<br />");
+            if(empty($_POST['emailaddress'])) {
+                echo("Email address cannot be empty<br />");
+            } else {
+                echo("Invalid email address<br />");
+            }
+            $_POST['validform'] = 'off';
         }
         if (empty($_POST['firstname'])) {
-        $_POST['validform'] = 'off';
-        echo("Invalid first name<br />");
+            $_POST['validform'] = 'off';
+            echo("Invalid first name<br />");
         }
         if (empty($_POST['lastname'])) {
-        $_POST['validform'] = 'off';
-        echo("Invalid last name<br />");
+            $_POST['validform'] = 'off';
+            echo("Invalid last name<br />");
         }
         if (empty($_POST['subject'])) {
-        $_POST['validform'] = 'off';
-        echo("Subject can't be left empty<br />");
+            $_POST['validform'] = 'off';
+            echo("Subject can't be left empty<br />");
         }
         if (!preg_match('/^[0-9]{7,12}+$/', $_POST['phonenumber'])) {
-        $_POST['validform'] = 'off';
-        echo("Invalid phone number<br />");
+            $_POST['validform'] = 'off';
+            echo("Invalid phone number<br />");
         }
         }
         if(empty($_POST) or $_POST['validform'] == 'off') {
@@ -118,7 +122,7 @@
             <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
             <input style="visibility: hidden" type="checkbox" name="validform" checked>
             <input type="submit" value="Submit">
-</form>');
+        </form>');
         } else if($_POST['validform'] == 'on') {
         echo ("Thank you for submitting your query!
         </br></br>
@@ -126,7 +130,7 @@
         We should receive and reply to this email within 72 hours.
         </br></br>
         Wiles Enterprises.");
-        $to_email = "odheysj2@pm.me";
+        $to_email = "benwiles@wilesenterprises.com";
         $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
         $body = $_POST['subject'];
         $headers = "From: ".$_POST['emailaddress'];
