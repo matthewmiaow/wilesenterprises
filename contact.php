@@ -121,7 +121,7 @@
         We should receive and reply to this email within 72 hours.
         </br></br>
         Wiles Enterprises.");
-        $to_email = "benwiles@wilesenterprises.com";
+        $to_email = "odheysj2@pm.me";
         $subject = 'Contact to Wiles Enterprises - '.$_POST['firstname'].' '.$_POST['lastname'];
         $body = $_POST['subject'];
         $headers = "From: ".$_POST['emailaddress'];
