@@ -78,27 +78,26 @@
     <input style="visibility: hidden" type="checkbox" name="validform" checked>
     <div class="container" style="margin-top: 50px">
         <?php
-        header('Content-type: text/plain');
         if(!empty($_POST)) {
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         $_POST['validform'] = 'off';
-        echo("Invalid email address\r\n");
+        echo("Invalid email address</br>");
         }
         if (empty($_POST['firstname'])) {
         $_POST['validform'] = 'off';
-        echo("Invalid first name\r\n");
+        echo("Invalid first name</br>");
         }
         if (empty($_POST['lastname'])) {
         $_POST['validform'] = 'off';
-        echo("Invalid last name\r\n");
+        echo("Invalid last name</br>");
         }
         if (empty($_POST['subject'])) {
         $_POST['validform'] = 'off';
-        echo("Subject can't be left empty.\r\n");
+        echo("Subject can't be left empty</br>");
         }
         if (!preg_match('/^[0-9]{7,12}+$/', $_POST['phonenumber'])) {
         $_POST['validform'] = 'off';
-        echo("Invalid phone number\r\n");
+        echo("Invalid phone number</br>");
         }
         }
         if(empty($_POST) or $_POST['validform'] == 'off') {
