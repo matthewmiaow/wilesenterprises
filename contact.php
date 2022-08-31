@@ -29,11 +29,11 @@
         }
 
             input[type=submit]:hover {
-                transform: translateY(3px);
+                transform: translateY(-2px);
             }
 
-            input[type=submit]:focus {
-                transform: translateY(-3px);
+            input[type=submit]:active {
+                transform: translateY(2px);
             }
 
         .container {
