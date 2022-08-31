@@ -110,6 +110,9 @@
         if (empty($_POST['subject'])) {
         echo('invalid subject');
         }
+        if (empty($_POST['phonenumber'])) {
+        echo('invalid pnum');
+        }
         echo ("Thank you for submitting your query!
         </br></br>
         You should receive a confirmation email from us soon to ensure that all your information is correct.</br>
