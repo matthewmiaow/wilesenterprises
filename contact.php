@@ -78,11 +78,6 @@
     <div class="container" style="margin-top: 50px">
         <?php
         if(!empty($_POST)) {
-            foreach ($_POST as $key => $value) {
-            echo $key.'='.$value.'<br />';
-            }
-            echo '<br />';
-
             if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
                 if(empty($_POST['emailaddress'])) {
                     echo("Email address cannot be empty<br />");
