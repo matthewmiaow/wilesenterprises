@@ -100,7 +100,7 @@
         } else {
         echo($_POST['firstname'].length);
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
-            echo('invalid addr
+            echo('invalid addr');
         } else if ($_POST['firstname'].length == 0) {
             echo('invalid fname');
         }
