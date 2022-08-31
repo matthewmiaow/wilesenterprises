@@ -18,17 +18,22 @@
         }
 
         input[type=submit] {
-            background-color: rgb(120, 120, 120);
+            background-color: rgb(255 57 41);
             color: white;
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-family: proxima nova, sans-serif;
+            font-family: georgia, sans-serif;
+            font-weight: bold;
         }
 
             input[type=submit]:hover {
-                background-color: #45a049;
+                transform: translateY(3px);
+            }
+
+            input[type=submit]:focus {
+                transform: translateY(-3px);
             }
 
         .container {
