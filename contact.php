@@ -99,6 +99,7 @@
         $_POST['validform'] = 'off';
         echo("Invalid phone number</br>");
         }
+        echo("not empty posts</br>");
         }
         if(empty($_POST) or $_POST['validform'] == 'off') {
         echo('<form method="post">
@@ -114,7 +115,7 @@
             <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
             <input type="submit" value="Submit">
         </form>');
-        } else if ($_POST['validform'] == 'on') {
+        } else if($_POST['validform'] == 'on') {
         echo ("Thank you for submitting your query!
         </br></br>
         You should receive a confirmation email from us soon to ensure that all your information is correct.</br>
