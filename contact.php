@@ -100,6 +100,8 @@
         } else {
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
             echo('invalid addr');
+        } else if ($_POST['firstname'].length == 0) {
+            echo('invalid fname');
         }
         echo ("Thank you for submitting your query!
         </br></br>
