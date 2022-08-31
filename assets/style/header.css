@@ -1,4 +1,9 @@
 ﻿body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     background-image: url(../img/dark-stage.jpg);
     background-size: cover;
     font-family: georgia, sans-serif;
