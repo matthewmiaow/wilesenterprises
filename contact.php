@@ -81,19 +81,23 @@
         if(!empty($_POST)) {
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         $_POST['validform'] = 'off';
-        echo($_POST['validform']);
+        echo('Invalid email address.');
         }
         if (empty($_POST['firstname'])) {
         $_POST['validform'] = 'off';
+        echo('First name can't be left empty.');
         }
         if (empty($_POST['lastname'])) {
         $_POST['validform'] = 'off';
+        echo('Last name can't be left empty.');
         }
         if (empty($_POST['subject'])) {
         $_POST['validform'] = 'off';
+        echo('Subject can't be left empty.');
         }
         if (!preg_match('/^[0-9]{7,12}+$/', $_POST['phonenumber'])) {
         $_POST['validform'] = 'off';
+        echo('Invalid phone number');
         }
         }
         if(empty($_POST) or $_POST['validform'] == 'off') {
