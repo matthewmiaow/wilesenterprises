@@ -77,31 +77,37 @@
     </header>
     <div class="container" style="margin-top: 50px">
         <?php
-        if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
-            if(empty($_POST['emailaddress'])) {
-                echo("Email address cannot be empty<br />");
-            } else {
-                echo("Invalid email address<br />");
+        if(!empty($_POST)) {
+            foreach ($_POST as $key => $value) {
+            echo $key.'='.$value.'<br />';
             }
-            $_POST['validform'] = 'off';
+            echo '<br />';
+
+            if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
+                if(empty($_POST['emailaddress'])) {
+                    echo("Email address cannot be empty<br />");
+                } else {
+                    echo("Invalid email address<br />");
+                }
+                $_POST['validform'] = 'off';
+            }
+            if (empty($_POST['firstname'])) {
+                $_POST['validform'] = 'off';
+                echo("Invalid first name<br />");
+            }
+            if (empty($_POST['lastname'])) {
+                $_POST['validform'] = 'off';
+                echo("Invalid last name<br />");
+            }
+            if (empty($_POST['subject'])) {
+                $_POST['validform'] = 'off';
+                echo("Subject can't be left empty<br />");
+            }
+            if (!preg_match('/^[0-9]{7,12}+$/', $_POST['phonenumber'])) {
+                $_POST['validform'] = 'off';
+                echo("Invalid phone number<br />");
+            }
         }
-        if (empty($_POST['firstname'])) {
-            $_POST['validform'] = 'off';
-            echo("Invalid first name<br />");
-        }
-        if (empty($_POST['lastname'])) {
-            $_POST['validform'] = 'off';
-            echo("Invalid last name<br />");
-        }
-        if (empty($_POST['subject'])) {
-            $_POST['validform'] = 'off';
-            echo("Subject can't be left empty<br />");
-        }
-        if (!preg_match('/^[0-9]{7,12}+$/', $_POST['phonenumber'])) {
-            $_POST['validform'] = 'off';
-            echo("Invalid phone number<br />");
-        }
-        
         if(empty($_POST) or $_POST['validform'] == 'off') {
         echo('<form method="post">
             <label for="fname">First Name</label>
