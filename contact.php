@@ -90,7 +90,7 @@
             <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
-            <input style="visibility: hidden" type="checkbox" name="validform" value=true>
+            <input style="visibility: hidden" type="checkbox" name="validform" checked>
             <input type="submit" value="Submit">
         </form>');
         } else {
