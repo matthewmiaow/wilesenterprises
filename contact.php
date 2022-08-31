@@ -55,7 +55,7 @@
             textarea {
                 font-size: 40px;
             }
-
+            
             .container {
                 width: 90%;
             }
