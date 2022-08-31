@@ -90,7 +90,7 @@
             <input type="text" id="email" name="emailaddress" placeholder="Email Address">
 
             <label for="pnum">Phone Number</label>
-            <input type="text" id="pnum" name="phonenumber" placeholder="Phone Number">
+            <input type="number" id="pnum" name="phonenumber" placeholder="Phone Number">
 
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
