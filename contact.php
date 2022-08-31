@@ -97,6 +97,7 @@
         echo($_POST['validform']);
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         $_POST['validform'] = false;
+        echo($_POST['validform']);
         }
         if (empty($_POST['firstname'])) {
         $_POST['validform'] = false;
