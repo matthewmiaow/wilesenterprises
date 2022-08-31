@@ -48,6 +48,14 @@
                 font-size: 50px;
             }
 
+            input {
+                font-size: 45px;
+            }
+
+            textarea {
+                font-size: 50px;
+            }
+
             .container {
                 width: 90%;
             }
