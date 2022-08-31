@@ -95,20 +95,20 @@
         </form>');
         } else {
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
-        $_POST['validform'] = false;
+        $_POST['validform'] = 'off';
         echo($_POST['validform']);
         }
         if (empty($_POST['firstname'])) {
-        $_POST['validform'] = false;
+        $_POST['validform'] = 'off';
         }
         if (empty($_POST['lastname'])) {
-        $_POST['validform'] = false;
+        $_POST['validform'] = 'off';
         }
         if (empty($_POST['subject'])) {
-        $_POST['validform'] = false;
+        $_POST['validform'] = 'off';
         }
         if (!preg_match('/^[0-9]{7,12}+$/', $_POST['phonenumber'])) {
-        $_POST['validform'] = false;
+        $_POST['validform'] = 'off';
         }
         echo ("Thank you for submitting your query!
         </br></br>
