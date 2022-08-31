@@ -98,11 +98,17 @@
             <input type="submit" value="Submit">
         </form>');
         } else {
-        echo(empty($_POST['firstname']));
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
-            echo('invalid addr');
-        } else if ($_POST['firstname'].length == 0) {
-            echo('invalid fname');
+        echo('invalid addr');
+        }
+        if (empty($_POST['firstname'])) {
+        echo('invalid fname');
+        }
+        if (empty($_POST['lastname'])) {
+        echo('invalid lname');
+        }
+        if (empty($_POST['subject'])) {
+        echo('invalid subject');
         }
         echo ("Thank you for submitting your query!
         </br></br>
