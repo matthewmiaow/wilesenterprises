@@ -78,7 +78,7 @@
 
     <div class="container" style="margin-top: 50px">
         <?php
-        if(empty($_POST or $_POST['emailaddress'] == 'asdasd')) {
+        if(empty($_POST or $_POST['validform'] == 'asdasd')) {
         echo('<form method="post">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="First Name">
@@ -94,6 +94,7 @@
             <input type="submit" value="Submit">
         </form>');
         } else {
+        echo($_POST['validform']);
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
         $_POST['validform'] = false;
         }
