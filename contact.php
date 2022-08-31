@@ -98,8 +98,9 @@
             <input type="submit" value="Submit">
         </form>');
         } else {
+        echo($_POST['firstname']);
         if (!filter_var($_POST['emailaddress'], FILTER_VALIDATE_EMAIL)) {
-            echo('invalid addr');
+            echo('invalid addr
         } else if ($_POST['firstname'].length == 0) {
             echo('invalid fname');
         }
