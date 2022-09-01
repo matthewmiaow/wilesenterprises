@@ -1,4 +1,36 @@
-﻿body {
+﻿
+.hide-mobile {
+    display: inherit;
+}
+
+.show-mobile {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(250, 250, 250);
+    border-radius: 5px;
+    width: 3px;
+}
+
+&:hover {
+    background: rgb(200, 200, 200);
+}
+
+body {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -6,7 +38,9 @@
     user-select: none;
     background-image: url(../img/dark-stage.jpg);
     background-size: cover;
+    background-attachment: fixed;
     font-family: georgia, sans-serif;
+    overflow: overlay;
 }
 
 .title {
@@ -22,9 +56,9 @@
 
 .subtitle {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 10vh;
+    justify-content: center;
+    margin-top: 5vh;
     margin-bottom: 130vh;
     font-size: 45px;
     font-weight: lighter;
@@ -65,13 +99,26 @@ li {
             transition-duration: 0.3s;
         }
 
-        li .active {
-            text-decoration: underline;
-            text-underline-offset: 0.2em;
-        }
-
+    li .active {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
 
 @media only screen and (max-device-width: 600px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+
+    .title {
+    }
+
+    .subtitle {
+    }
+
     ul {
         font-size: 60px;
     }
