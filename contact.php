@@ -47,28 +47,6 @@
         .errors {
             color: rgb(148, 10, 29);
         }
-
-        @media only screen and (max-device-width: 600px) {
-            ul {
-                font-size: 50px;
-            }
-
-            body {
-                font-size: 50px;
-            }
-
-            input {
-                font-size: 40px;
-            }
-
-            textarea {
-                font-size: 40px;
-            }
-            
-            .container {
-                width: 90%;
-            }
-        }
     </style>
 </head>
 <body>
