@@ -41,6 +41,7 @@ body {
     background-attachment: fixed;
     font-family: georgia, sans-serif;
     overflow: overlay;
+    color: white;
 }
 
 .title {
@@ -51,7 +52,6 @@ body {
     margin-top: 30vh;
     font-size: 150px;
     font-weight: bold;
-    color: white;
 }
 
 .subtitle {
@@ -62,10 +62,31 @@ body {
     margin-bottom: 130vh;
     font-size: 45px;
     font-weight: lighter;
-    color: white;
     letter-spacing: 0.6rem;
 }
 
+.spotlight {
+    position: absolute;
+    width: 95%;
+    margin: auto;
+    height: 100%;
+    background: rgba(255, 191, 28, 0.3);
+    clip-path: polygon(25% 0%, 75% 0%, 85% 100%, 15% 100%);
+    z-index: -1;
+}
+
+.dropdown {
+}
+
+.dropdown-content {
+    margin: auto;
+    transition-duration: 0.5s;
+    display: none;
+    position: absolute;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content { display: block; }
 
 ul {
     display: flex;
