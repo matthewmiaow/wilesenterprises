@@ -42,6 +42,7 @@ body {
     font-family: georgia, sans-serif;
     overflow: overlay;
     color: white;
+    overflow-x: hidden;
 }
 
 .title {
@@ -65,13 +66,30 @@ body {
     letter-spacing: 0.6rem;
 }
 
+@keyframes spotlight-open {
+    0% {
+        clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+        display: none;
+    }
+
+    1% {
+        display: inherit;
+    }
+
+    100% {
+        clip-path: polygon(25% 0%, 75% 0%, 85% 100%, 15% 100%);
+    }
+}
+
 .spotlight {
+    animation: 2s ease-out 0.5s 1 spotlight-open forwards;
     position: absolute;
-    width: 95%;
-    margin: auto;
-    height: 100%;
-    background: rgba(255, 191, 28, 0.3);
-    clip-path: polygon(25% 0%, 75% 0%, 85% 100%, 15% 100%);
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background: rgba(255, 191, 28, 0.2);
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
     z-index: -1;
 }
 
