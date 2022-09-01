@@ -50,7 +50,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vh;
     margin-top: 30vh;
     font-size: 150px;
     font-weight: bold;
@@ -74,7 +73,7 @@ body {
     }
 
     1% {
-        display: none;
+        display: block;
     }
 
     100% {
@@ -83,7 +82,7 @@ body {
 }
 
 .spotlight {
-    display: none;
+    display: block;
     animation: 2s ease-out 0.5s 1 spotlight-open forwards;
     position: absolute;
     top: 0;
@@ -93,6 +92,7 @@ body {
     background: rgba(255, 191, 28, 0.2);
     clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
     z-index: -1;
+    box-shadow: 0 0 10px rgba(255, 191, 28, 0.2);
 }
 
 .dropdown {
