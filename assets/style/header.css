@@ -52,10 +52,6 @@ li {
             transition-duration: 0.3s;
         }
 
-        li a:active {
-            transform: translateY(3px);
-        }
-
         li .active {
             text-decoration: underline;
             text-underline-offset: 0.2em;
