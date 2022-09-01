@@ -10,17 +10,8 @@
 <body>
     <header>
         <ul>
-            <li><a href="index.html"> Home </a></li>
-            <li><a href="about.html"> About </a></li>
-            <li class="dropdown">
-                <div>
-                    <a href="companies.php">Companies</a>
-                    <div class="dropdown-content">
-                        <a href="#">WLS</a>
-                        <a href="#">monk.</a>
-                    </div>
-                </div>
-            </li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a class="active" href="contact.php">Contact</a></li>
         </ul>
     </header>
