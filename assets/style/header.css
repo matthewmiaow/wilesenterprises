@@ -13,10 +13,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 15vh;
+    margin-top: 30vh;
     font-size: 150px;
     font-weight: bold;
     color: white;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-bottom: 130vh;
+    font-size: 45px;
+    font-weight: lighter;
+    color: white;
+    letter-spacing: 0.6rem;
 }
 
 
@@ -60,7 +73,12 @@ li {
 
 @media only screen and (max-device-width: 600px) {
     ul {
-        font-size: 50px;
+        font-size: 60px;
+    }
+
+    li {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     body {
