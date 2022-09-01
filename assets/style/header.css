@@ -48,8 +48,12 @@ li {
     }
 
         li a:hover {
-            transform: translate(0px, -3px);
+            transform: translateY(-3px);
             transition-duration: 0.3s;
+        }
+
+        li a:active {
+            transform: translateY(3px);
         }
 
         li .active {
