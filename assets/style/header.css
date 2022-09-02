@@ -66,6 +66,39 @@ body {
     letter-spacing: 0.6rem;
 }
 
+    .subtitle span {
+        text-align: center;
+        background-color: rgba(50, 50, 50, 0.5);
+        padding: 3px;
+    }
+
+.content-wrapper {
+    width: 60%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10% 0px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.circle-img {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 @keyframes spotlight-open {
     0% {
         clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
