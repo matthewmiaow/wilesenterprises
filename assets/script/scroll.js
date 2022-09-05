@@ -1,5 +1,8 @@
 const checkpoint = 500;
 
+const movingClass = "scroll-move";
+const opacityClass = "scroll-opacity";
+
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
     if (currentScroll <= checkpoint) {
@@ -7,7 +10,14 @@ window.addEventListener("scroll", () => {
     } else {
         opacity = 0;
     }
-    document.querySelector(".title").style.marginTop = ((opacity) * 30) + 'vh';
-    document.querySelector(".title").style.opacity = opacity;
-    document.querySelector(".subtitle").style.opacity = opacity;
+
+    var movingElems = document.getElementsByClassName(movingClass);
+    for (var i = 0; i < movingElems.length; i++) {
+        movingElems[i].style.marginTop = ((opacity) * 30) + 'vh';
+    }
+
+    var opacityElems = document.getElementsByClassName(opacityClass);
+    for (var i = 0; i < opacityElems.length; i++) {
+        opacityElems[i].style.opacity = opacity;
+    }
 });
