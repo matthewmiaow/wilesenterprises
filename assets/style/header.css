@@ -91,12 +91,13 @@ body {
     flex: 1;
 }
 
-.circle-img {
+img {
     width: 80%;
     height: 80%;
     margin: auto;
     object-fit: cover;
-    border-radius: 50%;
+    clip-path: circle(80% at center);
+    shape-outside: circle(80% at center);
 }
 
 @keyframes spotlight-open {
