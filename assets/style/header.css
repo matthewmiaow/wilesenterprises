@@ -51,7 +51,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 30vh;
-    font-size: 150px;
+    font-size: 8vw;
     font-weight: bold;
 }
 
@@ -61,7 +61,7 @@ body {
     justify-content: center;
     margin-top: 5vh;
     margin-bottom: 130vh;
-    font-size: 45px;
+    font-size: 3vw;
     font-weight: lighter;
     letter-spacing: 0.6rem;
 }
@@ -194,13 +194,16 @@ li {
     }
 
     .title {
+        font-size: 13vw;
     }
 
     .subtitle {
+        font-size: 5vw;
+        margin-top: 4vh;
     }
 
     ul {
-        font-size: 60px;
+        font-size: 6.5vw;
     }
 
     li {
@@ -222,5 +225,9 @@ li {
 
     .container {
         width: 90%;
+    }
+
+    .content-wrapper {
+        width: 80%;
     }
 }
