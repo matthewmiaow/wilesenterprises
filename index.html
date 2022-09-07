@@ -9,17 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        
-#mobile-content {display: none;}
-
-@media screen and (max-width: 768px) {
-
-#hide {display: none;}
-#mobile-content {display: block;}
-
-}
-        
-        
+       
         .footer-basic {
   padding:40px 0;
   background-color:#000000;
@@ -79,7 +69,16 @@
   color:#aaa;
   margin-bottom:0;
 }
-        
+   
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+
+#content-desktop {display: none;}
+#content-mobile {display: block;}
+
+}
         
     </style>
 </head>
@@ -101,14 +100,15 @@
             <span>Sound & Lighting Services</span>
         </div>
         
-         <div style="font-size: 8vw" id="mobile-content" class="title scroll-move scroll-opacity">
-            <span style="margin-right: 40px">Wiles</span>
-            <span>Enterprises</span>
-        </div>
-        <div style="font-size: 3vw" id="mobile-content" class="subtitle scroll-opacity">
-            <span>Sound & Lighting Services</span>
-        </div>
         
+   <div id="content-desktop">
+This is the content that will display on DESKTOPS.
+</div>
+
+
+<div id="content-mobile">
+This is the content that will display on MOBILE DEVICES.
+</div>     
         
     </div>
  <div class="footer-basic">
