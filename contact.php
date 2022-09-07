@@ -78,5 +78,19 @@
         }
         ?>
     </div>
+    
+     <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="mailto:benwiles@wilesenterprises.com"><i class="fa fa-envelope"></i></a><a href="tel:0204-164-5963"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/index.html">Home</a></li>
+                <li class="list-inline-item"><a href="/about.html">About</a></li>
+                <li class="list-inline-item"><a href="/terms.html">Terms</a></li>
+                <li class="list-inline-item"><a href="/privacy.html">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Wiles Enterprises © 2022</p>
+        </footer>
+    </div>
 </body>
 </html>
